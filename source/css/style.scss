@@ -452,6 +452,13 @@ figure.highlight {
 
     table {
         width: auto;
+
+        td {
+            border: none;
+            border-width: 0 0 1px;
+            padding: .3em .75em;
+            vertical-align: top;
+        }
     }
 
     pre {
@@ -459,7 +466,7 @@ figure.highlight {
         overflow: visible;
 
         .line {
-            line-height: 1.5rem;
+            line-height: 0.5rem;
         }
     }
 
