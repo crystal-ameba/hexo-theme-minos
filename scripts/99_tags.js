@@ -4,8 +4,16 @@ const cheerio = require('cheerio');
  * Colored quote block
  */
 hexo.extend.tag.register('colorquote', function (args, content) {
-    var type = args[0];
+    var type = args;
     return '<blockquote class="colorquote ' + type + '">' + hexo.render.renderSync({ text: content, engine: 'markdown' }) + '</blockquote>';
+}, { ends: true });
+
+/**
+ * Example block
+ */
+hexo.extend.tag.register('example', function (args, content) {
+    var type = args;
+    return '<blockquote class="example ' + type + '">' + hexo.render.renderSync({ text: content, engine: 'markdown' }) + '</blockquote>';
 }, { ends: true });
 
 const rEscapeContent = /<escape(?:[^>]*)>([\s\S]*?)<\/escape>/g;
